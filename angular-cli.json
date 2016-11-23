@@ -6,7 +6,7 @@
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "D:/eclipse_working/EOP/EngineeringOssPortal/WebContent",
       "assets": [
         "assets",
         "favicon.ico"
@@ -18,9 +18,17 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/animate.css/animate.min.css",
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/jquery/dist/jquery.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js",
+        "../node_modules/html5shiv/dist/html5shiv.min.js",
+        "../node_modules/ie10-viewport-bug-workaround.js/ie10-viewport-bug-workaround.js",
+        "../node_modules/slideout/dist/slideout.min.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

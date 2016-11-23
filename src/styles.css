@@ -1,1 +1,312 @@
-/* You can add global styles to this file, and also import other style files */
+/* Font inclusions */
+@font-face {
+  font-family: 'NeoTech';
+  src: url('./assets/fonts/NeoTech/NeoTech.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/NeoTech/NeoTech.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/NeoTech/NeoTech.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/NeoTech/NeoTech.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech/NeoTech.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech/NeoTech.svg#NeoTech') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'NeoTech Light';
+  src: url('./assets/fonts/NeoTech Light/NeoTech Light.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/NeoTech Light/NeoTech Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/NeoTech Light/NeoTech Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/NeoTech Light/NeoTech Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech Light/NeoTech Light.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech Light/NeoTech Light.svg#NeoTech Light') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'NeoTech Medium';
+  src: url('./assets/fonts/NeoTech Medium/NeoTech Medium.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/NeoTech Medium/NeoTech Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/NeoTech Medium/NeoTech Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/NeoTech Medium/NeoTech Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech Medium/NeoTech Medium.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/NeoTech Medium/NeoTech Medium.svg#NeoTech Medium') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Rotis Sans Serif 55';
+  src: url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.svg#Rotis Sans Serif 55') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'AT Rotis Sans Serif 56';
+  src: url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.svg#AT Rotis Sans Serif 56') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'AT Rotis Sans Serif 75';
+  src: url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.eot'); /* IE9 Compat Modes */
+  src: url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.otf')  format('opentype'), /* Safari, Android, iOS */
+       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.svg#AT Rotis Sans Serif 75') format('svg'); /* Legacy iOS */
+}
+@font-face {
+  font-family: 'icomoon';
+  src:  url('./assets/fonts/iconfonts/icomoon.eot?jonddz');
+  src:  url('./assets/fonts/iconfonts/icomoon.eot?jonddz#iefix') format('embedded-opentype'),
+    url('./assets/fonts/iconfonts/icomoon.ttf?jonddz') format('truetype'),
+    url('./assets/fonts/iconfonts/icomoon.woff?jonddz') format('woff'),
+    url('./assets/fonts/iconfonts/icomoon.svg?jonddz#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Font inclusions end */
+
+/* Icon font Styles */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-network:before {
+  content: "\e900";
+}
+.icon-trouble-ticket:before {
+  content: "\e901";
+}
+.icon-ola:before {
+  content: "\e902";
+}
+.icon-fault:before {
+  content: "\e903";
+}
+.icon-dashboard:before {
+  content: "\e904";
+}
+.icon-performance:before {
+  content: "\e905";
+}
+.icon-change:before {
+  content: "\e906";
+}
+/* Icon font Styles End */
+
+/* Global styles */
+h1,h2,h3,h4,h5,h6{
+  font-family: "NeoTech";
+}
+.btn{
+    border-radius: 0px;
+        font-family: "NeoTech Medium";
+}
+.btn-fullwidth{
+    width:100%;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color:#00B49C;
+    border-color: #00B49C;
+    font-size:18px;
+}
+
+.btn-primary.focus,
+.btn-primary:focus {
+    color: #fff;
+    background-color:#00846E;
+    border-color: #00846E;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color:#00846E;
+    border-color: #00846E;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary {
+    color: #fff;
+    background-color:#00846E;
+    border-color: #00846E;
+}
+
+.btn-primary.active.focus,
+.btn-primary.active:focus,
+.btn-primary.active:hover,
+.btn-primary:active.focus,
+.btn-primary:active:focus,
+.btn-primary:active:hover,
+.open>.dropdown-toggle.btn-primary.focus,
+.open>.dropdown-toggle.btn-primary:focus,
+.open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color:#00846E;
+    border-color: #00846E;
+}
+
+.btn-primary.active,
+.btn-primary:active,
+.open>.dropdown-toggle.btn-primary {
+    background-image: none
+}
+
+.btn-primary.disabled.focus,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+    background-color: #337ab7;
+    border-color: #2e6da4
+}
+
+.btn-primary .badge {
+    color: #337ab7;
+    background-color: #fff
+}
+/* Global styles end */
+
+/* Login Page Styles */
+.login-background-container{
+  background: url(./assets/images/background.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.logo{
+    height: auto;
+
+    position: relative;
+    float: right;
+}
+.login-form-container{
+  padding-top: 14%;
+}
+.login{
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.43);
+    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.43);
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.43);
+    display: block;
+    font-size: 14px;
+}
+.login h3{
+    font-family: 'NeoTech';
+    margin-top:0px;
+}
+.form-control{
+    border-radius: 0px;
+    font-family: "NeoTech Medium";
+    padding: 2px 4px;
+    font-size: 14px;
+    color: #000000;
+    background-color: rgba(255, 255, 255, 1);
+    border-color:rgba(255, 255, 255, 1);
+}
+.form-group{
+    margin-top:20px;
+    font-family: "NeoTech Light"
+}
+.form-group:last-child{
+        margin-bottom:30px;
+}
+@media (min-width: 1600px){
+  .logo{
+        width: 10%;
+  }
+  .login-container{
+    padding-top:16.5%;
+    padding-bottom:10%;
+  }
+  .brand{
+    padding-top:16.5%;
+  }
+  .container{
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1600px) {
+  .logo{
+        width: 8%;
+  }
+  .login-container{
+    padding-top:11%;
+    padding-bottom:10%;
+  }
+  .brand{
+    padding-top:25%;
+  }
+  .brand img{
+    width: 70%;
+  }
+  .container{
+    width: 80%;
+  }
+}
+@media (min-width:992px) and (max-width: 1200px) {
+  .logo{
+        width: 10%;
+  }
+  .login-container{
+    padding-top:11%;
+    padding-bottom:10%;
+  }
+  .brand{
+    padding-top:25%;
+  }
+}
+@media (min-width:768px) and (max-width: 991px) {
+  .brand{
+    padding-top:0px;
+  }
+  .brand img{
+    width: 80%;
+  }
+  .logo{
+        width: 40%;
+  }
+  .login{
+    margin-top:8%;
+  }
+}
+@media (max-width:767px){
+  .logo{
+    width: 70%;
+  }
+  .login-background-container{
+    padding-top: 0px;
+  }
+  .brand img{
+    width: 140%;
+  }
+  .login{
+    margin-top:30%;
+  }
+  .brand{
+    padding-top:0px;
+    width: 80%;
+  }
+}
+/* Login Page Styles end*/
