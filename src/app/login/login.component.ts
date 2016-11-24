@@ -17,8 +17,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginFun(){
-    this.response_data = "hello g";
-    console.log(this.eopHttpClientService.authenticateUser("",""));
+    this.response_data = this.eopHttpClientService.authenticateUser("captanumer@gmail.com","123");
   }
 
 }

@@ -7,8 +7,7 @@ export class NetworkHttpClientService {
   constructor(private http: Http) { }
 
     createAuthorizationHeader(headers: Headers) {
-    headers.append('Authorization', 'Basic ' +
-      btoa('username:password')); 
+    headers.append('customkey', 'customval'); 
   }
 
   get(url) {
