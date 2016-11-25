@@ -9,14 +9,15 @@ import {EopHttpClientService} from '../network/core/eop-http-client.service'
 })
 export class LoginComponent implements OnInit {
 
-  response_data = "post data";
+constructor(private eopHttpClientService: EopHttpClientService) { }       
 
-  constructor(private eopHttpClientService: EopHttpClientService) { }
+  response_data = "post data";
 
   ngOnInit() {
   }
 
-  loginFun(){
+
+  login(){
     var serviceResponse = this.eopHttpClientService.authenticateUser("captanumer@gmail.com","123");
     serviceResponse.subscribe(
             data => {
@@ -29,5 +30,5 @@ export class LoginComponent implements OnInit {
             () => console.log("Finished")
             );
   }
-
+  
 }

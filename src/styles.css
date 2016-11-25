@@ -26,33 +26,7 @@
        url('./assets/fonts/NeoTech Medium/NeoTech Medium.otf')  format('opentype'), /* Safari, Android, iOS */
        url('./assets/fonts/NeoTech Medium/NeoTech Medium.svg#NeoTech Medium') format('svg'); /* Legacy iOS */
 }
-@font-face {
-  font-family: 'Rotis Sans Serif 55';
-  src: url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.eot'); /* IE9 Compat Modes */
-  src: url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('./assets/fonts/Rotis Sans Serif 55/Rotis Sans Serif 55.svg#Rotis Sans Serif 55') format('svg'); /* Legacy iOS */
-}
-@font-face {
-  font-family: 'AT Rotis Sans Serif 56';
-  src: url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.eot'); /* IE9 Compat Modes */
-  src: url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('./assets/fonts/AT Rotis Sans Serif 56/AT Rotis Sans Serif 56.svg#AT Rotis Sans Serif 56') format('svg'); /* Legacy iOS */
-}
-@font-face {
-  font-family: 'AT Rotis Sans Serif 75';
-  src: url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.eot'); /* IE9 Compat Modes */
-  src: url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.woff') format('woff'), /* Pretty Modern Browsers */
-       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.otf')  format('opentype'), /* Safari, Android, iOS */
-       url('./assets/fonts/AT Rotis Sans Serif 75/AT Rotis Sans Serif 75.svg#AT Rotis Sans Serif 75') format('svg'); /* Legacy iOS */
-}
+
 @font-face {
   font-family: 'icomoon';
   src:  url('./assets/fonts/iconfonts/icomoon.eot?jonddz');
@@ -229,8 +203,8 @@ fieldset[disabled] .btn-primary:hover {
     margin-top:20px;
     font-family: "NeoTech Light"
 }
-.form-group:last-child{
-        margin-bottom:30px;
+.login .btn{
+  margin-top:20px;
 }
 @media (min-width: 1600px){
   .logo{
@@ -310,3 +284,145 @@ fieldset[disabled] .btn-primary:hover {
   }
 }
 /* Login Page Styles end*/
+
+/* Side Menu Styles */
+.nav-side-menu{
+  height: 100%;
+  background-color: #1d1f20;
+}
+.side-menu{
+  list-style: none;
+  
+  padding-left:0px;
+}
+.side-menu-item{
+  display: block;
+  font-family: "NeoTech";
+  font-size: 20px;
+  background-color: #1A1A1A;
+}
+.side-menu-item a {
+  display: block;
+  padding: 10px 20px;
+  color: #ffffff;
+}
+
+.side-menu-item a:hover {  
+  text-decoration: none;
+  background-color: #00B49C;
+  color: #000000;
+}
+.side-menu-item a:hover span{
+  color: #ffffff;
+}
+.side-menu-item a:focus, .side-menu-item a:focus span{
+  color: #000000;
+  background-color: #00B49C;
+  text-decoration: none;
+}
+.side-menu-item a span{
+  color: #00B49C;
+  padding-right:10px;
+  font-size: 24px;
+}
+.menu-heading{
+  color: #ffffff;
+  background-color: #1A1A1A;
+  border-bottom: 1px solid #2a2d2f;
+  font-size: 30px;
+  display: block;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "NeoTech"
+}
+/* Side Menu Styles End */
+
+/* Top header styles */
+.header-top{
+  background: #1A1A1A;
+  width: 100%;
+  min-height: 62px;
+
+}
+.toggle-button{
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0);
+  border-color:rgba(0, 0, 0, 0);
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left:5px;
+  padding-right: 5px;
+}
+.toggle-button:hover, .toggle-button:focus{
+  color: #00B49C;
+}
+.main-brand{
+  display: inline-block;
+  line-height: 62px;
+}
+.main-brand img{
+  width: 80%;
+}
+.user-account{
+  position: relative;
+  float: right;
+}
+.user-account .btn{
+  height:62px;
+  background-color:#1A1A1A;
+  color:#ffffff;
+  font-size: 20px;
+}
+.user-account .btn:hover{
+  background-color:#00B49C;
+}
+.user-account .open .btn{
+    background-color:#00B49C;
+}
+.user-account .dropdown-menu{
+  background-color: #E6E6E6;
+  border-radius:0px;
+  left: 0px;
+  margin-top:0px;
+  font-size: 20px;
+}
+.user-image{
+  width: 40px;
+  margin-right: 10px;
+  border-radius:50%;
+}
+/* Top header styles End*/
+
+/* Main Canvas styles */
+.white-bg-wrapper{
+  background-color:#ffffff;
+  padding-top:20px;
+  padding-bottom:20px;
+  -webkit-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 4px 0px rgba(0,0,0,0.75);
+  margin-top: 20px;
+}
+.page-heading{
+  display: inline-block;
+}
+.page-heading h1{
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.breadcrumbs{
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+.breadcrumbs .breadcrumb{
+  margin-bottom:0px;
+  background-color: #ffffff;
+  font-size: 22px;
+  padding: 0px;
+}
+/* Main Canvas styles End */
