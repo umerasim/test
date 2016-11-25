@@ -8,7 +8,8 @@ export class NetworkHttpClientService {
   constructor(private http: Http) { }
 
     createAuthorizationHeader(headers: Headers) {
-    headers.append('customkey', 'customval'); 
+    headers.append('customkey', 'customval');
+    headers.append('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8'); 
   }
 
   get(url) {

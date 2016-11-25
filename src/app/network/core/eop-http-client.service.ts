@@ -5,17 +5,18 @@ import 'rxjs/Rx'
 
 @Injectable()
 export class EopHttpClientService {
-  base_url : String = "http://echo.jsontest.com/title/ipsum/content/blah";
+  base_url : String = "http://echo.jsontest.com/title/ipsum";
   
   response_data : any = null;
   constructor(private networkHttpClientService : NetworkHttpClientService) { }
 
-  authenticateUser(userName : String , password: String){    
+  authenticateUser(userName : String , password: String){  
+    var method = "/content/blah"  
     var data = JSON.stringify( {
                                 "content" : userName,
                                 "title" : password
                                 });
-    return this.networkHttpClientService.post(this.base_url, data);
+    return this.networkHttpClientService.post(this.base_url + method, data);
   }
 
   getFaultDashData(method : string){
