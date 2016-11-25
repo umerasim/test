@@ -17,7 +17,17 @@ export class LoginComponent implements OnInit {
   }
 
   loginFun(){
-    this.response_data = this.eopHttpClientService.authenticateUser("captanumer@gmail.com","123");
+    var serviceResponse = this.eopHttpClientService.authenticateUser("captanumer@gmail.com","123");
+    serviceResponse.subscribe(
+            data => {
+              // data.title
+              // data.title
+              this.response_data = JSON.stringify(data)
+              return this.response_data;
+            } ,
+            error => alert(error) ,
+            () => console.log("Finished")
+            );
   }
 
 }

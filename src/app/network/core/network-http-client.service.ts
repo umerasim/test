@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http'
+import 'rxjs/Rx'
 
 @Injectable()
 export class NetworkHttpClientService {
@@ -15,7 +16,7 @@ export class NetworkHttpClientService {
     this.createAuthorizationHeader(headers);
     return this.http.get(url, {
       headers: headers
-    });
+    }).map(res => res.json());
   }
 
   post(url, data) {
@@ -23,7 +24,7 @@ export class NetworkHttpClientService {
     this.createAuthorizationHeader(headers);
     return this.http.post(url, data, {
       headers: headers
-    });
+    }).map(res => res.json());
   }
 
 }
