@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
 import {EopHttpClientService} from '../network/core/eop-http-client.service'
 
 @Component({
@@ -9,7 +10,7 @@ import {EopHttpClientService} from '../network/core/eop-http-client.service'
 })
 export class LoginComponent implements OnInit {
 
-constructor(private eopHttpClientService: EopHttpClientService) { }       
+constructor(private eopHttpClientService: EopHttpClientService, private router: Router) { }       
 
   response_data: any = "post data";
   loginStatus = "Error :"
@@ -53,7 +54,8 @@ constructor(private eopHttpClientService: EopHttpClientService) { }
     this.response_data = JSON.parse(loginResponse)
 
     if(!this.response_data.error){
-      //TODO: Redirect to Portal and also forward "this.response_data.processResponse.userData"
+      let link = ['/home'];
+      this.router.navigate(link);
     }else{
       this.loginStatus = this.loginStatus + this.response_data.errorObject.errorMessage;
     }
